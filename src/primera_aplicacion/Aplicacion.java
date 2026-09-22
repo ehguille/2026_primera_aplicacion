@@ -35,7 +35,26 @@ public class Aplicacion {
 	}
 	
 	public static void main(String[] args) {
-		Aplicacion primera=new Aplicacion();
+		Cocinero unCocinero=new Cocinero("Luisa",18);
+		Cocinero otraCocinera=new Cocinero("Josefa",23);
+		//no hago unCocinero.Cocinero();
+		
+		otraCocinera.hacerMasa(300, 100, 20);
+		
+		int peso=unCocinero.hacerMasa(200, 100, 5); //305
+		System.out.println(peso);
+		
+		int pesoOtraMasa=unCocinero.hacerMasa(100, 50, 2); //152
+		System.out.println(pesoOtraMasa);
+		
+		String nombreCocinero=unCocinero.consultarNombre();
+		System.out.println(nombreCocinero);
+		
+		unCocinero.establecerNombre("Manuela");
+		nombreCocinero=unCocinero.consultarNombre();
+		System.out.println(nombreCocinero);
+		
+	//	Aplicacion primera=new Aplicacion();
 	//	int d=primera.sumar(); //d=7
 	//	int e=primera.sumar();
 	//	System.out.println(d+e);
@@ -43,8 +62,8 @@ public class Aplicacion {
 	//	float g=primera.sumarFlotante();
 	//	System.out.println(g);
 		
-		primera.ejemploTonto();
-		primera.ejemploTonto();
+	//	primera.ejemploTonto();
+	//	primera.ejemploTonto();
 	//  otraApp solo existe dentro de ejemploTonto();	
 	//  otraApp.sumar();
 	//	primera.restar();
